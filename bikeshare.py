@@ -33,21 +33,24 @@ def get_filters():
             city = 'chicago'
             break
     # TO DO: get user input for month (all, january, february, ... , june)
+    """
+    Refactored the python code to remove the lower() function when checking the values as we have already added it to the month input line of code.
+    """
     while True:
         month = input('\nWhich month would you like to see statistics for?  Type in the following month names or type the word all for all months: all, january, february, ... , june.\n').lower()
-        if month.lower() == 'all':
+        if month == 'all':
             break
-        elif month.lower() == 'january':
+        elif month == 'january':
             break
-        elif month.lower() == 'february':
+        elif month == 'february':
             break
-        elif month.lower() == 'march':
+        elif month == 'march':
             break
-        elif month.lower() == 'april':
+        elif month == 'april':
             break
-        elif month.lower() == 'may':
+        elif month == 'may':
             break
-        elif month.lower() == 'june':
+        elif month == 'june':
             break
         else:
             print('\nSince you have entered an invalid value, we will default january.\n')
