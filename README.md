@@ -16,6 +16,9 @@ washington.csv
 ### Built With
 Anaconda Individual Edition
 
+### Prerequisites
+Python 2.0
+
 ### Credits
 Author: Cathy Nemets
 Email Address: cathy.nemets@cbre.com
