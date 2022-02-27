@@ -18,34 +18,40 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: need to update this to be able to offer the user another chance to input values if an invalid value is entered
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    """
+    Refactored the python code to remove the lower() function when checking the values as we have already added it to the city input line of code.
+    """
     while True:
         city = input('\nWhich city would you like to see statistics for?  Please type in one of the following city names: chicago, new york city, washington.\n').lower()
-        if city.lower() == 'chicago':
+        if city == 'chicago':
             break
-        elif city.lower() == 'new york city':
+        elif city == 'new york city':
             break
-        elif city.lower() == 'washington':
+        elif city == 'washington':
             break
         else:
             print('\nSince you have entered an invalid value, we will default chicago.\n')
             city = 'chicago'
             break
     # TO DO: get user input for month (all, january, february, ... , june)
+    """
+    Refactored the python code to remove the lower() function when checking the values as we have already added it to the month input line of code.
+    """
     while True:
         month = input('\nWhich month would you like to see statistics for?  Type in the following month names or type the word all for all months: all, january, february, ... , june.\n').lower()
-        if month.lower() == 'all':
+        if month == 'all':
             break
-        elif month.lower() == 'january':
+        elif month == 'january':
             break
-        elif month.lower() == 'february':
+        elif month == 'february':
             break
-        elif month.lower() == 'march':
+        elif month == 'march':
             break
-        elif month.lower() == 'april':
+        elif month == 'april':
             break
-        elif month.lower() == 'may':
+        elif month == 'may':
             break
-        elif month.lower() == 'june':
+        elif month == 'june':
             break
         else:
             print('\nSince you have entered an invalid value, we will default january.\n')
