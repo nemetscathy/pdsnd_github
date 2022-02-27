@@ -17,13 +17,16 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    """
+    Refactored the python code to remove the lower() function when checking the values as we have already added it to the city input line of code.
+    """
     while True:
         city = input('\nWhich city would you like to see statistics for?  Please type in one of the following city names: chicago, new york city, washington.\n').lower()
-        if city.lower() == 'chicago':
+        if city == 'chicago':
             break
-        elif city.lower() == 'new york city':
+        elif city == 'new york city':
             break
-        elif city.lower() == 'washington':
+        elif city == 'washington':
             break
         else:
             print('\nSince you have entered an invalid value, we will default chicago.\n')
@@ -91,21 +94,21 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     df = pd.read_csv(CITY_DATA[city])
-    
+
     df['Start Time'] =  pd.to_datetime(df['Start Time'])
-    
+
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
-    
+
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
-        
+
         df = df[df['month'] == month]
-    
+
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
-    
+
     return df
 
 
@@ -194,12 +197,12 @@ def user_stats(df):
         """Added the ability to display the oldest, youngest, and most common birth year in the code above for cities that are not washington."""
     else:
         print('\nNo statistics in washington for Sex or Birth Year.\n')
-        
+
     print("\nThis took %s seconds." % round((time.time() - start_time),5))
     print('-'*40)
 
-    
-    
+
+
 def display_raw_data(df):
     """Function to request if the user wants to view the raw data 5 rows at at time."""
     beginning_row = 0
@@ -230,11 +233,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display_raw_data(df)
-        
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
-            
+
 if __name__ == "__main__":
 	main()
