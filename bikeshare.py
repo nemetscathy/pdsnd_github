@@ -231,7 +231,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         display_raw_data(df)
-
+    # TO DO: marking this part of the script to remember to try an elegant way to determine if users have entered an invalid entry by mistake and request another chance at an input instead of ending the script
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
