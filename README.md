@@ -8,10 +8,10 @@
 We have the bikeshare data from 3 cities in csv files.  The python script allows the user to input the city, month, and day and calculates the statistics of the bikeshare usages.
 
 ### Files Used
-bikeshare.py
-chicago.csv
-new_york_city.csv
-washington.csv
+-bikeshare.py
+-chicago.csv
+-new_york_city.csv
+-washington.csv
 
 ### Built With
 Anaconda Individual Edition
